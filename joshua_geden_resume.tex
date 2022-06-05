@@ -1,0 +1,188 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj
+% Adapted by : Josh Geden
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \small #3 & \small #4 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & \small #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://jgeden.github.io/}{\Large Josh Geden}} & \href{mailto:joshgeden10@gmail.com}{joshgeden10@gmail.com}\\
+  \href{https://jgeden.github.io/}{jgeden.github.io} &  1.864.373.3991 \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {NASA Jet Propulsion Lab}{Pasadena, CA}
+      {Software Engineer Intern, Flight Software \& Avionics Systems Group}{May 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Hardware-Software Interfacing}
+          {Building a configurable web app with Vue and Tailwind CSS to display FPGA register definitions and provide an interactive interface to encode and decode bit fields for hardware manipulation.}
+        \resumeItem{Testing}
+          {Created a CI pipeline to automatically run Cypress tests in a Docker container using Jenkins.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lawrence Berkeley National Lab}{Berkeley, CA}
+      {Software Engineer Intern, Usable Software Systems Group}{Feb. 2022 - May 2022}
+      \resumeItemListStart
+        \resumeItem{Data Engineering}
+          {Designed and implemented new data analysis modules for the AmeriFlux scientific data pipeline. Used numpy to analyze data provided by over 11,000 environmental science researchers and provide Matplotlib figures and structured JSON feedback on potential data quality issues.}
+        \resumeItem{Logging}
+          {Refactored existing Logger and Status modules to enable configurable CSV reporting while maintaing backwards compatibility with other areas of the pipeline.}
+        \resumeItem{Testing}
+          {Enhanced regression testing by adding to a CI/CD test suite with pytest, CircleCI, and Codecov. Increased code coverage by over 4,000 lines and enabled parallel execution of tests, decreasing runtime by 70\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {MealMe}{San Francisco, CA}
+      {Full Stack Developer (Contract)}{Jan. 2022 - Feb. 2022}
+      \resumeItemListStart
+        \resumeItem{Performance Scaling}
+          {Refactored the internal customer support web app to scale to handle over \$50,000 worth of orders a day by implementing pagination and migrating data from Firebase to MongoDB. Decreased loading times for chat history, order queue, and order history pages by over 90\%.}
+        \resumeItem{Frontend Design}
+          {Streamlined the UI and improved ease of use of the web app by including collapsed views, visual order status, filtering \& search, order handling instructions, and refund history.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {National Energy Research Scientific Computing Center (NERSC)}{Berkeley, CA}
+      {Software Engineer Intern, Jupyter Tools}{May 2021 - Aug. 2021}
+      \resumeItemListStart
+        % \resumeItem{Frontend Extensions}
+        %   {Built extensions with Typescript to include NERSC specific documentation in the JuptyerLab help menu and include an announcements tab in the JupyterLab task bar.}
+        \resumeItem{Supercomputing Scheduling}
+          {Collborated on a JupyterLab React extension to add a GUI for scheduling supercomputing jobs with the Slurm workload manager. Added filtering and search features, responsive UI improvements, and used the Traitlets library to enable backend configuration for custom Slurm commands.}
+        \resumeItem{Parallel Computing}
+          {Prototyped an ipywidget to provide a user-friendly interface to setup and configure Dask parallel compute jobs within Jupyter notebooks.}
+        \resumeItem{Virtual Environments and Containers}
+          {Designed and created a custom JupyterHub service that enables launching notebooks in virtual environments such as conda and venv or container images on remote clusters.}
+        \resumeItem{Testing}
+          {Used GitHub Actions and Selenium/pytest to create automatic CI/CD testing pipelines that tested both backend logic and frontend displays of Jupyter extensions.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Duke University}{Durham, NC}
+      {B.S. in Computer Science, B.A. in German Studies;  GPA: 3.99 (Dean's List)}{Aug. 2019 -- Jul. 2023}
+    \resumeSubheading
+      {Freie Universit\"{a}t Berlin}{Berlin, Germany}
+      {Visiting Student; Courses in Computer Science, German, \& Italian}{Fall 2021, Spring 2023}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects \& Activities}
+  \resumeSubHeadingListStart
+    % \resumeSubItem{GroupDuke}
+    %   {Built a full-stack application to help Duke students find course GroupMe chats. Built the frontend with SvelteKit and the backend with Go and Firebase.}
+    \resumeSubItem{Me.reka Makerspace}
+      {Volunteered with a group of 4 Duke students on an education management platform. Refactored existing Angular components to be more modular and helped transition from Realtime DB to Firestore.}
+    \resumeSubItem{Teaching Assistant}
+      {Taught recitation sections for Discrete Math and Algorithms \& Data Structures at Duke. Covered topics including common data structures, time \& space complexity, proofs \& logic, combinatorics, and probability.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+ \section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Langauges}{Python, Javascript/Typescript, Java, Go, C/C++, R}
+    \resumeSubItem{Technologies}{Vue, React, SvelteKit, Flask, Express, PostgreSQL, Redis, Firebase, Heroku, Docker, Git}
+    \resumeSubItem{Coursework}{Web Apps, Machine Learning, Algorithms, Data Visualization, Database Systems, Computer Architecture}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
