@@ -21,4 +21,4 @@ docker run --rm -i -v "$PWD":/data latex pdflatex joshua_geden_resume.tex
 
 ### License
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT.

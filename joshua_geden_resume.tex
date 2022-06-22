@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -103,23 +103,27 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {NASA Jet Propulsion Lab}{Pasadena, CA}
+      {NASA Jet Propulsion Laboratory}{Pasadena, CA}
       {Software Engineer Intern, Flight Software \& Avionics Systems Group}{May 2022 - Present}
       \resumeItemListStart
         \resumeItem{Hardware-Software Interfacing}
-          {Building a configurable web app with Vue and Tailwind CSS to display FPGA register definitions and provide an interactive interface to encode and decode bit fields for hardware manipulation.}
+          {Building regvue, an open-source hardware documentation tool that can build a full documentation site from register description files.}
+        \resumeItem{Cross-Platform Development}
+          {Created a web-based frontend with Vue and Typescript and added styles with Tailwind CSS. Used the Tauri framework to create executable binaries for Linux and Mac.}
+        \resumeItem{Bit Manipulation}
+          {Implemented automatic encoding and decoding of bit values for hardware debugging and testing with support for unknown bit values and hexadecimal, decimal, \& binary display modes.}
         \resumeItem{Testing}
           {Created a CI pipeline to automatically run Cypress tests in a Docker container using Jenkins.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Lawrence Berkeley National Lab}{Berkeley, CA}
+      {Lawrence Berkeley National Laboratory}{Berkeley, CA}
       {Software Engineer Intern, Usable Software Systems Group}{Feb. 2022 - May 2022}
       \resumeItemListStart
         \resumeItem{Data Engineering}
           {Designed and implemented new data analysis modules for the AmeriFlux scientific data pipeline. Used numpy to analyze data provided by over 11,000 environmental science researchers and provide Matplotlib figures and structured JSON feedback on potential data quality issues.}
         \resumeItem{Logging}
-          {Refactored existing Logger and Status modules to enable configurable CSV reporting while maintaing backwards compatibility with other areas of the pipeline.}
+          {Refactored existing Logger and Status modules to allow creating configurable CSV summary files that reduce log files to the most important user-specific statistics.}
         \resumeItem{Testing}
           {Enhanced regression testing by adding to a CI/CD test suite with pytest, CircleCI, and Codecov. Increased code coverage by over 4,000 lines and enabled parallel execution of tests, decreasing runtime by 70\%.}
       \resumeItemListEnd
@@ -138,8 +142,8 @@
       {National Energy Research Scientific Computing Center (NERSC)}{Berkeley, CA}
       {Software Engineer Intern, Jupyter Tools}{May 2021 - Aug. 2021}
       \resumeItemListStart
-        % \resumeItem{Frontend Extensions}
-        %   {Built extensions with Typescript to include NERSC specific documentation in the JuptyerLab help menu and include an announcements tab in the JupyterLab task bar.}
+        \resumeItem{Frontend Extensions}
+          {Built extensions with Typescript to include NERSC specific documentation in the JuptyerLab help menu and include an announcements tab in the JupyterLab task bar.}
         \resumeItem{Supercomputing Scheduling}
           {Collborated on a JupyterLab React extension to add a GUI for scheduling supercomputing jobs with the Slurm workload manager. Added filtering and search features, responsive UI improvements, and used the Traitlets library to enable backend configuration for custom Slurm commands.}
         \resumeItem{Parallel Computing}
@@ -147,7 +151,7 @@
         \resumeItem{Virtual Environments and Containers}
           {Designed and created a custom JupyterHub service that enables launching notebooks in virtual environments such as conda and venv or container images on remote clusters.}
         \resumeItem{Testing}
-          {Used GitHub Actions and Selenium/pytest to create automatic CI/CD testing pipelines that tested both backend logic and frontend displays of Jupyter extensions.}
+          {Used GitHub Actions and Selenium to create automatic CI/CD testing pipelines that tested both backend logic and frontend displays of Jupyter extensions.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -166,21 +170,21 @@
 %-----------PROJECTS-----------------
 \section{Projects \& Activities}
   \resumeSubHeadingListStart
-    % \resumeSubItem{GroupDuke}
-    %   {Built a full-stack application to help Duke students find course GroupMe chats. Built the frontend with SvelteKit and the backend with Go and Firebase.}
+    \resumeSubItem{GroupDuke}
+      {Built a full-stack application to help Duke students find course GroupMe chats. Built the frontend with SvelteKit and the backend with Go and Firebase.}
     \resumeSubItem{Me.reka Makerspace}
       {Volunteered with a group of 4 Duke students on an education management platform. Refactored existing Angular components to be more modular and helped transition from Realtime DB to Firestore.}
     \resumeSubItem{Teaching Assistant}
-      {Taught recitation sections for Discrete Math and Algorithms \& Data Structures at Duke. Covered topics including common data structures, time \& space complexity, proofs \& logic, combinatorics, and probability.}
+      {Taught recitation classes for Data Structures (COMPSCI 201) and Discrete Math (COMPSCI 230). Covered topics including common data structures, time \& space complexity, introduction to proofs, combinatorics, and probability.}
   \resumeSubHeadingListEnd
 
 
 %--------PROGRAMMING SKILLS------------
  \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Langauges}{Python, Javascript/Typescript, Java, Go, C/C++, R}
+    \resumeSubItem{Languages}{Python, Javascript/Typescript, Java, Go, C/C++, R}
     \resumeSubItem{Technologies}{Vue, React, SvelteKit, Flask, Express, PostgreSQL, Redis, Firebase, Heroku, Docker, Git}
-    \resumeSubItem{Coursework}{Web Apps, Machine Learning, Algorithms, Data Visualization, Database Systems, Computer Architecture}
+    \resumeSubItem{Coursework}{Web Apps, Machine Learning, Algorithm Design, Data Visualization, Database Systems, Computer Architecture}
   \resumeSubHeadingListEnd
 
 
